@@ -3,7 +3,7 @@ from flask_restx import Resource
 from .. import api
 from ..controller.aluguel_dao import AluguelDAO as dao
 
-ns = api.namespace('aluguelpequisarinserir', 'Aluguel')
+ns = api.namespace('Aluguel01', 'Adicionar e Pesquisar')
 
 
 @ns.route("/")
