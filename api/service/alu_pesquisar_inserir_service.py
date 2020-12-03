@@ -19,8 +19,9 @@ class AluguelInserirrService(Resource):
 class AluguelServiceItem(Resource):
 
     def get(self, id):
-        ''' Retornar dados de um Aluguel a partir do Id'''
+        ''' Retornar dados de um Aluguel a partir do  Id'''
         return make_response(
             jsonify({'resultado' : dao().get_by_id(id)})
         ) 
 
+ 
