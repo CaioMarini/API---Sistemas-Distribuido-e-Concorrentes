@@ -3,7 +3,7 @@ from flask_restx import Resource
 from .. import api
 from ..controller.ferramentas_dao import FerramentaDAO as dao
 
-ns = api.namespace('Ferramenta','ferramenta')
+ns = api.namespace('Ferramenta','Retorna todas as ferramentas')
 
 @ns.route("/")
 class FerramentaService(Resource):
