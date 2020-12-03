@@ -45,17 +45,9 @@ class AluguelDAO():
     def get_by_id(self,id):
         return AluguelSchema().dump(Aluguel.query.filter(Aluguel.id==id).one())
 
-    def delete(self,dados):
+    def delete(self,id):
         try:
-            obj = Aluguel()
-            obj.modelo = dados.get('modelo')
-            obj.tipo = dados.get('tipo')
-            obj.marca = dados.get('marca')
-            obj.preco = dados.get('preco')
-            obj.cliente = dados.get('cliente')
-            obj.telcli = dados.get('telcli')
-
-            db.session.delete(obj)
+            Aluguel.query.filter(Aluguel.id==id).delete()
             db.session.commit()
 
             return make_response(jsonify({'mensagem: ': 'operacao realizada com sucesso'}),200)
