@@ -29,7 +29,7 @@ blueprint = Blueprint('/api',__name__,url_prefix=URL_PREFIX)
 
 # Instanciar o Flask-RestX
 api = Api(
-    version = '1.0',
+    version = '1.0.2',
     title = 'Locadora de Equipamentos',
     description = 'Este é um serviço para locação de equipamentos'
 )
